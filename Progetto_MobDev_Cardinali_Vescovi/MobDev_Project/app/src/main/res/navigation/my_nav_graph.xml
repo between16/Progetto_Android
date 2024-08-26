@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_graph"
+    app:startDestination="@id/first">
+
+    <fragment
+        android:id="@+id/second"
+        android:name="com.example.mobdev_project.second"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_second_to_steps_chart"
+            app:destination="@id/steps_chart" />
+    </fragment>
+    <fragment
+        android:id="@+id/first"
+        android:name="com.example.mobdev_project.first"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_first_to_second"
+            app:destination="@id/second" />
+        <action
+            android:id="@+id/action_first_to_third"
+            app:destination="@id/third" />
+        <action
+            android:id="@+id/action_first_to_fourth"
+            app:destination="@id/fourth" />
+    </fragment>
+    <fragment
+        android:id="@+id/third"
+        android:name="com.example.mobdev_project.third"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_third_to_sleepNote"
+            app:destination="@id/sleepNote" />
+        <action
+            android:id="@+id/action_third_to_charts"
+            app:destination="@id/charts" />
+    </fragment>
+    <fragment
+        android:id="@+id/fourth"
+        android:name="com.example.mobdev_project.fourth"
+        android:label="fragment_fourth"
+        tools:layout="@layout/fragment_fourth" >
+        <action
+            android:id="@+id/action_fourth_to_bookNote"
+            app:destination="@id/bookNote" />
+        <action
+            android:id="@+id/action_fourth_to_book_charts"
+            app:destination="@id/book_charts" />
+    </fragment>
+    <fragment
+        android:id="@+id/sleepNote"
+        android:name="com.example.mobdev_project.SleepNote"
+        android:label="fragment_sleep_note"
+        tools:layout="@layout/fragment_sleep_note" >
+        <action
+            android:id="@+id/action_sleepNote_to_first"
+            app:destination="@id/first" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookNote"
+        android:name="com.example.mobdev_project.BookNote"
+        android:label="fragment_book_note"
+        tools:layout="@layout/fragment_book_note" >
+        <action
+            android:id="@+id/action_bookNote_to_first"
+            app:destination="@id/first" />
+    </fragment>
+    <fragment
+        android:id="@+id/charts"
+        android:name="com.example.mobdev_project.Charts"
+        android:label="fragment_charts"
+        tools:layout="@layout/fragment_charts" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/book_charts"
+        android:name="com.example.mobdev_project.book_charts"
+        android:label="fragment_book_charts"
+        tools:layout="@layout/fragment_book_charts" />
+    <fragment
+        android:id="@+id/steps_chart"
+        android:name="com.example.mobdev_project.steps_chart"
+        android:label="fragment_steps_chart"
+        tools:layout="@layout/fragment_steps_chart" />
+</navigation>
